@@ -4,3 +4,4 @@ tesseract-ocr-script-latn
 tesseract-ocr-script-frak
 libtesseract-dev
 ocrmypdf
+chrome
