@@ -6,3 +6,4 @@ pyppeteer==0.2.6
 
 fastapi
 uvicorn
+wait4it
