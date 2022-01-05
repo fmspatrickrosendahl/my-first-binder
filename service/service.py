@@ -1,3 +1,5 @@
+from fastapi import FastAPI
+
 from pydantic import BaseModel
 from typing import List
 from typing import Optional
@@ -28,11 +30,11 @@ def median_image_stack ( ims_rgb, stencil ) :
         return [r, g, b]
     
     oversize = 5
-    im_processed = Image.new("RGB", (ims[0].size[0] + oversize,ims[0].size[1] + oversize), (255, 255, 255))
+    im_processed = Image.new("RGB", (ims_rgb[0].size[0] + oversize,ims_rgb[0].size[1] + oversize), (255, 255, 255))
     pix_processed = im_processed.load()
     
-    for x in range(stencil,ims[0].size[0]-stencil) :
-        for y in range(stencil,ims[0].size[1]-stencil) :
+    for x in range(stencil,ims_rgb[0].size[0]-stencil) :
+        for y in range(stencil,ims_rgb[0].size[1]-stencil) :
             
             rs = []
             gs = []
@@ -128,6 +130,8 @@ class Captcha(BaseModel):
     url: str
     imagedata: List[str]
 
+app = FastAPI()
+    
 @app.post("/captcha")
 def solve_captcha(captcha: Captcha):
     #print(base64.b64decode(captcha.imagedata))
