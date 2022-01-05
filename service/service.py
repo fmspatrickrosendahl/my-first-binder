@@ -1,3 +1,10 @@
+from pydantic import BaseModel
+from typing import List
+from typing import Optional
+from PIL import Image
+import io
+import base64
+
 from PIL import Image, ImageFilter, ImageEnhance
 from IPython.display import display
 import pytesseract as tess
@@ -49,7 +56,7 @@ def median_image_stack ( ims_rgb, stencil ) :
     
     return im_processed
   
-  def grey_filter_hsv( im, minsaturation, mindarkness ) :
+def grey_filter_hsv( im, minsaturation, mindarkness ) :
 
     im_processed = Image.new("RGB", im.size, (255, 255, 255))
     pix_processed = im_processed.load()
@@ -76,10 +83,10 @@ def median_image_stack ( ims_rgb, stencil ) :
             
     return im_processed
   
-  def unskew( img, shear=-0.3, crop=10 ) :
+def unskew( img, shear=-0.3, crop=10 ) :
     return img.copy().transform(img.size, Image.AFFINE, (1, shear, 0, 0, 1, 0)).crop((crop,0,img.size[0],img.size[1]))
   
-  def image_2_text( im ):
+def image_2_text( im ):
     
     def call_tesseract( im, psm ) :
         text = tess.image_to_string(im, config='--psm ' + str(psm)).strip() # , lang='eng'
@@ -93,7 +100,7 @@ def median_image_stack ( ims_rgb, stencil ) :
     recognized.append(call_tesseract(im,13))
     return Counter(recognized)
   
-  def solve ( ims_rgb ) :
+def solve ( ims_rgb ) :
     recognized = Counter()
 
     for minsaturation in (30,50,70,90) :
@@ -117,13 +124,6 @@ def median_image_stack ( ims_rgb, stencil ) :
     print("\nTotals: " + str(recognized))
     return recognized
   
-from pydantic import BaseModel
-from typing import List
-from typing import Optional
-from PIL import Image
-import io
-import base64
-
 class Captcha(BaseModel):
     url: str
     imagedata: List[str]
