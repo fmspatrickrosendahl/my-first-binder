@@ -7,3 +7,5 @@ pyppeteer==0.2.6
 fastapi[all]
 uvicorn
 wait4it
+
+sklearn
