@@ -5,6 +5,8 @@ tesseract-ocr-script-frak
 libtesseract-dev
 ocrmypdf
 
+git
+
 #chromium-browser
 ca-certificates
 fonts-liberation
