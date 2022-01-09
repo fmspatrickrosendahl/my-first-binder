@@ -2,14 +2,6 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fmspatrickrosendahl/my-first-binder/HEAD)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](<a href="https://mybinder.org/v2/gh/fmspatrickrosendahl/my-first-binder/HEAD" target="_blank"/>)
-
-<a href="https://www.google.com" target="_blank">
-  Moin
-</a>
-  
-to launch in binder:   https://mybinder.org/v2/gh/fmspatrickrosendahl/my-first-binder/HEAD
-
 evaluate the notebooks website_pyppeteer and IALTYO_reload/solve_reload
 
 
