@@ -5,3 +5,6 @@ pyppeteer-install
 
 # enables /proxy/<port>
 jupyter serverextension enable --sys-prefix jupyter_server_proxy
+
+# setup git
+git config --global user.email "patrick.rosendahl@fms-logistics.com"
