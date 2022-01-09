@@ -5,7 +5,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](<a href="https://mybinder.org/v2/gh/fmspatrickrosendahl/my-first-binder/HEAD" target="_blank"/>)
 
 <a href="https://www.google.com" target="_blank">
-  <img src="https://mybinder.org/badge_logo.svg"/>
+  Moin
 </a>
   
 to launch in binder:   https://mybinder.org/v2/gh/fmspatrickrosendahl/my-first-binder/HEAD
