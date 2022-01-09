@@ -1,5 +1,7 @@
 # my-first-binder
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fmspatrickrosendahl/my-first-binder/HEAD)
+
 to launch in binder:   https://mybinder.org/v2/gh/fmspatrickrosendahl/my-first-binder/HEAD
 
 evaluate the notebooks website_pyppeteer and IALTYO_reload/solve_reload
