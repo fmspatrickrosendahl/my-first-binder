@@ -2,8 +2,6 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fmspatrickrosendahl/my-first-binder/HEAD)
 
-[link](url){:target="_blank"}
-
 evaluate the notebooks website_pyppeteer and IALTYO_reload/solve_reload
 
 
